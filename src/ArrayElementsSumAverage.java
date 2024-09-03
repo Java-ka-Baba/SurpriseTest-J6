@@ -36,9 +36,13 @@ public class ArrayElementsSumAverage {
         int minimumDifferenceIndex = 0;
         // iterating over the array from index 1 to find the index of average's nearest element
         for (int index = 1; index < array.length; index++) {
+            //finding the difference of the average and array element on given index
             double difference = Math.abs(average - array[index]);
+            //checking if the minimumDifference is bigger than difference
             if(minimumDifference > difference){
+                //updating minimumDifference
                 minimumDifference = difference;
+                //updating minimumDifferenceIndex
                 minimumDifferenceIndex = index;
             }
         }
